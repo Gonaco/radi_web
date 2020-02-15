@@ -1,0 +1,129 @@
+# Authors: 
+#          - Clara Layti
+#          - Daniel Moreno
+
+* RADI
+
+Git repository of the Radi Web project.
+
+** Git structure and flow
+
+[[file:.gitflow.png][git flow]]
+
+*** Branches
+
+- master. Stable version of the web
+- dev. Developing stage before master. It merges with *master* ONLY when the testing is done
+- dev_clara. Developing branch for Clara to avoid collisions with others. It merges with *dev* ONLY when there is no collision with others' work.
+- dev_dani. Developing branch for Dani to avoid collisions with others. It merges with *dev* ONLY when there is no collision with others' work.
+
+#+BEGIN_SRC text
+
+master  -A---M---N---O---P---...
+dev       /     /   /   /   /
+         I     B   C   D   E
+          \   /   /   /   /
+dev_d/c    `-------------'
+
+#+END_SRC
+
+*** Commands cheatsheet
+
+**** Branches
+
+#+BEGIN_SRC shell
+
+git branch [branch-name]
+
+git checkout [branch-name]
+
+git merge [branch]
+
+git branch -d [branch-name]
+
+#+END_SRC
+
+**** Sync
+
+#+BEGIN_SRC shell
+
+git fetch
+
+git merge
+
+git push
+
+git pull
+
+#+END_SRC
+
+**** Visualize and make changes
+
+#+BEGIN_SRC shell
+
+git log
+
+git log --follow [file]
+
+git diff [first-branch]...[second-branch]
+
+git add [file]
+
+git commit -m "[descriptive message]"
+
+#+END_SRC
+
+**** Redo commits
+
+#+BEGIN_SRC shell
+
+git reset [commit]
+
+git reset --hard [commit]
+
+#+END_SRC
+** Folder structure
+
+#+BEGIN_SRC text
+
+WEB/
+├── ARXIU
+│   └── ACTS
+│       ├── ACT_1
+│       │   ├── text.html
+│       │   └── text.md
+│       └── ACT_2
+│           ├── text.html
+│           └── text.md
+├── css
+│   └── lore.css
+├── fonts
+│   └── lore.otf
+├── header_nav.html
+├── img
+│   └── lore.png
+├── INFO
+│   ├── collaborador.md
+│   ├── contacte.md
+│   ├── info.html
+│   ├── info.md
+│   ├── programacio.md
+│   └── text.md
+├── INICI
+│   ├── COVER
+│   │   ├── cover.html
+│   │   ├── modelo.3d
+│   │   └── text.md
+│   ├── CURRENT_ACTS
+│   │   ├── ACT_1
+│   │   │   └── text.md
+│   │   └── ACT_2
+│   │       └── text.md
+│   └── form
+│       └── form.html
+├── js
+├── main.html
+├── README.org
+└── README.org~
+
+#+END_SRC
