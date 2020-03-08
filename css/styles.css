@@ -1,9 +1,9 @@
 /********************** INSTAL FONTS ********************/
 @font-face {
   font-family: 'glyphworldmountain';
-  src: url('/fonts/Glyphworld-Mountain/glyphworld-mountain-webfont.woff2')
+  src: url('fonts/Glyphworld-Mountain/glyphworld-mountain-webfont.woff2')
       format('woff2'),
-    url('/fonts/Glyphworld-Mountain/glyphworld-mountain-webfont.woff')
+    url('fonts/Glyphworld-Mountain/glyphworld-mountain-webfont.woff')
       format('woff');
   font-weight: normal;
   font-style: normal;
