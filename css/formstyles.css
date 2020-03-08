@@ -1,3 +1,7 @@
+/*
+* Hoja de estilo para el diseño de formulario
+*/
+
 #formulario {
   display: flex;
   flex-direction: column;

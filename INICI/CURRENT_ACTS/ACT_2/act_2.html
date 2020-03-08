@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="css/lore.css" />
     <link rel="stylesheet" href="css/card-styles.css" />
     <link rel="stylesheet" href="/css/formstyles.css" />
+    <link rel="icon" href="img/dot.png" type="image/gif" sizes="16x16" />
     <script type="text/javascript" src="scripts.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.4.1.js"
@@ -13,8 +14,11 @@
     ></script>
   </head>
   <body>
-    <div id="card2" class="test">
-      <div class="title"><h2>EMMIRALLAMENT</h2></div>
+    <div id="card2" class="test1">
+      <div class="title">
+        <img class="dot" src="img/dot.png" />
+        <h2>EMMIRALLAMENT</h2>
+      </div>
 
       <div class="thumbnail">
         <img src="img/particles.png" class="img-card" />
@@ -66,9 +70,7 @@
       </div>
       <span id="inscriute">
         <script>
-          $('#inscriute').load(
-            'INICI/form/form.html #formulario div'
-          );
+          $('#inscriute').live('INICI/form/form.html #formulario div');
           console.log('enter');
         </script>
       </span>
