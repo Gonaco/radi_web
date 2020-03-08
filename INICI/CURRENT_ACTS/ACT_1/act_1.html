@@ -6,61 +6,52 @@
     <link rel="stylesheet" href="css/card-styles.css" />
     <link rel="stylesheet" href="css/formstyles.css" />
 
+        <script>
+      function includeHTML() {
+	  var z, i, elmnt, file, xhttp;
+	  /* Loop through a collection of all HTML elements: */
+	  z = document.getElementsByTagName("*");
+	  for (i = 0; i < z.length; i++) {
+	      elmnt = z[i];
+	      /*search for elements with a certain atrribute:*/
+	      file = elmnt.getAttribute("w3-include-html");
+	      if (file) {
+		  /* Make an HTTP request using the attribute value as the file name: */
+		  xhttp = new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+		      if (this.readyState == 4) {
+			  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+			  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+			  /* Remove the attribute, and call this function once more: */
+			  elmnt.removeAttribute("w3-include-html");
+			  includeHTML();
+		      }
+		  }
+		  xhttp.open("GET", file, true);
+		  xhttp.send();
+		  /* Exit the function: */
+		  return;
+	      }
+	  }
+      }
+    </script>
+    
     <script
       src="https://code.jquery.com/jquery-3.4.1.js"
       integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
       crossorigin="anonymous"
-    ></script>
+      ></script>
+
+    
   </head>
   <body>
     <div id="card1">
-      <div class="title"><h2>EMMIRALLAMENT</h2></div>
+      <div w3-include-html="text.html"></div>
+      <div w3-include-html="INICI/CURRENT_ACTS/ACT_1/text.html"></div>
+      <script>
+	includeHTML();
+      </script>
 
-      <div class="thumbnail">
-        <img src="img/dona-vel.jpg" class="img-card" />
-      </div>
-
-      <div class="description">
-        <p class="text">
-          Loritis et, volo molum assitiat. Optatia vendestior moluptam quiate
-          qui simod quas et quatest, optatiossum si cnt lam quodianti ut fugit,
-          necepta velicimus dit, simaio doluptatur sitiati nvelendam facerovit
-          ut enimodi que volupta quo beribusapid. Nam ut res maxim sam
-          ipsaperesed magni tem int.
-        </p>
-        <p class="text">
-          Cite ped mo esenis mi, omnis everitaquo incil essi sam quo blab iur
-          aut eosserum volectur, cum aperendae verio tem dessit veritia
-          iuOmnihill essimincto modipid magnatem ex et vere nobit optiam ut quam
-          ullupicit, non esseniatem nos num quossim faccus asimagnim reped
-          minctur? Beatur, voluptatem veliqui dit, occusda idebitati dite
-          nihilitas eum ipsam liqui dolor ma volupidunti nescitiae latem eum et
-          velia d
-        </p>
-      </div>
-      <div class="thumbnail">
-        <img src="img/animation.png" class="animation-card" />
-      </div>
-      <div class="title"><h2>REQUERIMENTS</h2></div>
-      <div class="requirements">
-        <ol class="required">
-          <li>roba còmode</li>
-          <li>mitjons</li>
-          <li>cantimplora</li>
-        </ol>
-        <ol class="required">
-          <li>mòbil</li>
-          <li>auriculars</li>
-          <li>ulleres</li>
-        </ol>
-      </div>
-      <div class="adress">
-        <p>
-          El Pumarejo <br />Av. del Carrilet, 187, Nau 4,<br />08907
-          L’Hospitalet de Llobregat,<br />Barcelona
-        </p>
-        <p>09.03.2020<br />18:00 PM</p>
-      </div>
       <!-- <container id="formulario"> -->
         <!-- <script>
           $('#formulario').load(
@@ -102,5 +93,5 @@
               <br /> <br /> 
             </div>
           </div>
-  </body>
+</body>
 </html>
