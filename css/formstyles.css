@@ -99,3 +99,22 @@ svg:hover {
     transform: rotate(0);
   }
 }
+
+/********************** MEDIA QUERIES ********************/
+
+@media screen and (max-width: 800px) {
+  .name,
+  .lastname,
+  .email,
+  .comment {
+    width: auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .name,
+  .lastname,
+  .email,
+  .comment {
+    width: auto;
+  }
+}

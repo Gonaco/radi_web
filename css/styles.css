@@ -37,9 +37,11 @@ a.navlink {
 a.navlink:hover,
 a.navlink:active {
   font-family: 'glyphworldmountain';
-  font-size: 25pt;
 }
 
+a.current {
+  font-family: 'glyphworldmountain';
+}
 #menu {
   position: fixed;
   top: 0px;
@@ -55,7 +57,6 @@ a.navlink:active {
   border-bottom: black 1.5px solid;
   background-color: #fff;
   font-family: Arial, Helvetica Neue, sans-serif;
-  font-size: 30pt;
   color: black;
 }
 /********************** INTRO ********************/
@@ -80,7 +81,7 @@ a.navlink:active {
 *         )    
 */
 .welcome {
-  background-image: url('/radi_web/img/welcomeinteractive.jpeg');
+  background-image: url('../img/welcomeinteractive.jpeg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -140,7 +141,45 @@ a.navlink:active {
   display: none;
 }
 
-/* Hide scrollbar for IE and Edge */
-.item {
-  -ms-overflow-style: none;
+/********************** MEDIA QUERIES ********************/
+
+@media screen and (max-width: 800px) {
+  .acts {
+    display: flex;
+    flex-direction: column;
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .acts {
+    flex: auto;
+    max-width: 100%;
+    overflow-x: unset;
+    overflow-y: unset;
+  }
+  .item,
+  .item2,
+  .item3 {
+    border-width: 0px 0px 1.5px 0px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .slider {
+    display: flex;
+    flex-direction: column;
+    flex: 100%;
+    max-width: 100%;
+  }
+  .acts {
+    flex: auto;
+    max-width: 100%;
+    overflow-x: unset;
+    overflow-y: unset;
+  }
+  .item,
+  .item2,
+  .item3 {
+    border-width: 0px 0px 1.5px 0px;
+  }
 }

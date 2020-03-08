@@ -20,7 +20,8 @@
   align-items: center;
 }
 
-.about {
+.about,
+.radi-family {
   margin: 20px 50px 0px 15px;
 }
 
@@ -34,8 +35,8 @@
   justify-content: left;
 }
 
-.radi-family {
-  margin: 20px 50px 0px 15px;
+.radi-family-mobile {
+  display: none;
 }
 
 /********************** TABLE CONTACT-INFO ********************/
@@ -53,4 +54,61 @@
 th {
   text-align: left;
   width: 50px;
+}
+
+/********************** MEDIA QUERIES ********************/
+
+@media screen and (max-width: 800px) {
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    flex: 100%;
+    max-width: 100%;
+  }
+  .full-height {
+    height: auto;
+  }
+  .left-content {
+    font-family: 'avara';
+    width: auto;
+    border-right: none;
+    border-bottom: solid 1.5px black;
+  }
+
+  table {
+    display: none;
+  }
+  .radi-family-mobile {
+    display: inline;
+  }
+  .credencials {
+    margin: 20px 50px 0px 15px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    flex: 100%;
+    max-width: 100%;
+  }
+  .full-height {
+    height: auto;
+  }
+  .left-content {
+    font-family: 'avara';
+    width: auto;
+    border-right: none;
+    border-bottom: solid 1.5px black;
+  }
+  .radi-family {
+    display: none;
+  }
+  .radi-family-mobile {
+    display: inline;
+  }
+  .credencials {
+    margin: 20px 50px 0px 15px;
+  }
 }
