@@ -1,12 +1,28 @@
 /********************** INSTAL FONTS ********************/
 @font-face {
   font-family: 'glyphworldmountain';
-  src: url('/fonts/Glyphworld-Mountain/glyphworld-mountain-webfont.woff2')
+  src: url('fonts/Glyphworld-Mountain/glyphworld-mountain-webfont.woff2')
       format('woff2'),
-    url('/fonts/Glyphworld-Mountain/glyphworld-mountain-webfont.woff')
+    url('fonts/Glyphworld-Mountain/glyphworld-mountain-webfont.woff')
       format('woff');
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'avarabold';
+  src: url('fonts/AvaraBold/avara-bold-webfont.woff2') format('woff2'),
+    url('fonts/AvaraBold/avara-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/********************** INTRO ********************/
+.intro {
+  font-family: 'avara';
+  /* font-weight: normal; */
+  font-style: normal;
+  font-size: 18pt;
+  margin-top: 15px;
 }
 /********************** NAV ********************/
 
@@ -43,13 +59,18 @@ a:active {
 *         y crear este efecto parallax  
 *         sin romper el diseño del slider (acts)    
 */
+.welcome {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 /********************** CARDS APP ********************/
 
 .slider {
   display: grid;
   grid-template-columns: 6;
   align-content: start;
-
   width: 100%;
   height: 100%;
 }
@@ -66,6 +87,7 @@ a:active {
   display: grid;
   grid-template-columns: repeat(5, 30%);
   overflow-x: scroll;
+  border-top: black 1px solid;
   /* scroll-snap-type: x proximity; */
 }
 
@@ -101,10 +123,4 @@ a:active {
 /* Hide scrollbar for IE and Edge */
 .item {
   -ms-overflow-style: none;
-}
-
-/****************** IMG SIZE ************************/
-
-#img-card {
-  width: calc(100% / 2);
 }
