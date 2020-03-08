@@ -1,0 +1,97 @@
+#formulario {
+  display: flex;
+  flex-direction: column;
+}
+
+.register {
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  margin: 7px 2px;
+  padding: 8px 2px;
+}
+
+.name,
+.lastname,
+.email,
+.comment {
+  margin-bottom: 8px;
+  padding: 5px;
+  border: #000000 2px solid;
+  width: 27.5vw; /* A CANVIAR DESPUÉS DE LA 1A ENTREGA */
+}
+
+.btnRegister {
+  width: 200px;
+}
+
+svg {
+  display: flex;
+  align-items: center;
+  width: 120px;
+}
+
+/******************************* BTN ANIMATION **************************************/
+svg:hover {
+  -webkit-animation-name: rotate;
+  -moz-animation-name: rotate;
+  -ms-animation-name: rotate;
+  -o-animation-name: rotate;
+  animation-name: rotate;
+  -webkit-animation-duration: 5s;
+  -moz-animation-duration: 5s;
+  -ms-animation-duration: 5s;
+  -o-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+  }
+}
+@-moz-keyframes rotate {
+  from {
+    -moz-transform: rotate(360deg);
+  }
+  to {
+    -moz-transform: rotate(0);
+  }
+}
+@-ms-keyframes rotate {
+  from {
+    -ms-transform: rotate(360deg);
+  }
+  to {
+    -ms-transform: rotate(0);
+  }
+}
+@-o-keyframes rotate {
+  from {
+    -o-transform: rotate(360deg);
+  }
+  to {
+    -o-transform: rotate(0);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}

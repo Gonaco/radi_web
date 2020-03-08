@@ -5,40 +5,46 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/lore.css" />
     <link rel="stylesheet" href="css/card-styles.css" />
+    <link rel="stylesheet" href="/radi_web/css/formstyles.css" />
 
     <script type="text/javascript" src="scripts.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <!-- <script>
-      $(function() {
-        $('#includedContent').load('card.html');
-      });
-    </script> -->
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
   </head>
   <header>
-    <div class="nav-container">
+    <div class="nav-container" id="navbar">
      <script>
        $('.nav-container').load('header_nav.html .nav-container div')
      </script>
   </header>
   <body>
-  <div class="slider">
-    <script>
-    $('.slider').load('INICI/inici.html .slider div')
-    </script>
-    </div>
-    <!-- <div class="slider">
-      <span class="acts">
+ <div class="slider">
+    <span class="acts">
         <span class="item" id="card1"
           ><h2>EMMIRALLAMENT</h2>
           <script>
             $('#card1').load('INICI/CURRENT_ACTS/ACT_1/act_1.html #card1 div');
           </script>
         </span>
-        <li class="item"><h2>EMMIRALLAMENT</h2></li>
-        <li class="item"><h2>EMMIRALLAMENT</h2></li>
+        <span class="item2" id="card2"
+        ><h2>EMMIRALLAMENT</h2>
+         <script>
+          $('#card2').load('INICI/CURRENT_ACTS/ACT_2/act_2.html #card2 div');
+        </script>
+        </span>
+        <div class="item3" id="card3">
+       <h2>EMMIRALLAMENT</h2>
+       <script>
+       $('#card3').load('INICI/CURRENT_ACTS/ACT_3/act_3.html #card3 div');
+       </script>
+      </div>
         <li class="item"><h2>EMMIRALLAMENT</h2></li>
         <li class="item"><h2>EMMIRALLAMENT</h2></li>
       </span>
-    </div> -->
+   
+    </div> 
+
   </body>
 </html>

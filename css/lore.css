@@ -1,0 +1,26 @@
+/********************** INSTAL FONTS ********************/
+/* @font-face {
+  font-family: 'Avara Bold';
+  src: url('/fonts/Avara-Bold.otf');
+}
+@font-face {
+  font-family: 'GlyphWorld Mountain';
+  src: url('/fonts/GlyphWorld-Mountain.otf');
+}
+@font-face {
+  font-family: 'Minion Pro';
+  src: url('/fonts/MinionPro-Regular.otf');
+} */
+
+/********************** MAIN CSS ********************/
+/* 
+body {
+  font-family: 'Avara Bold';
+  color: #000000;
+} */
+
+h2 {
+  font-family: Arial, Helvetica Neue, sans-serif;
+  font-weight: normal;
+  font-size: 13pt;
+}
