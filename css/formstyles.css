@@ -1,3 +1,7 @@
+/*
+* Hoja de estilo para el diseño de formulario
+*/
+
 #formulario {
   display: flex;
   flex-direction: column;
@@ -93,5 +97,24 @@ svg:hover {
   }
   to {
     transform: rotate(0);
+  }
+}
+
+/********************** MEDIA QUERIES ********************/
+
+@media screen and (max-width: 800px) {
+  .name,
+  .lastname,
+  .email,
+  .comment {
+    width: auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .name,
+  .lastname,
+  .email,
+  .comment {
+    width: auto;
   }
 }

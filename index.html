@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/lore.css" />
     <link rel="stylesheet" href="css/card-styles.css" />
     <link rel="stylesheet" href="css/formstyles.css" />
-
+    <link rel="icon" href="img/dot.png" type="image/gif" sizes="16x16" />
     <script type="text/javascript" src="scripts.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.4.1.js"
@@ -15,25 +15,30 @@
     ></script>
   </head>
   <body>
-    <div class="welcome">
-      <img class="interactive" src="img/welcomeinteractive.jpeg" />
-      <p class="intro">
-        Andaepeliquae duciuntio et, nihillamus excest litiumet, seniet eos re
-        sed modiciunto quunt voluptat moloris rem. Dersperum, sit qui to que
-        veligento te vendanissit quundandam re pellaborum repe odis delique
-        consecto id que nihicia tatius. Dit acillignatur re etum est quo dolecta
-        voluptatem. <a href="INFO/info_dev.html">Read More</a>
-      </p>
+    <div class="welcome"></div>
+    <p class="intro">
+      Andaepeliquae duciuntio et, nihillamus excest litiumet, seniet eos re sed
+      modiciunto quunt voluptat moloris rem. Dersperum, sit qui to que veligento
+      te vendanissit quundandam re pellaborum repe odis delique consecto id que
+      nihicia tatius. Dit acillignatur re etum est quo dolecta voluptatem.
+      <a href="INFO/info.html">Read More</a>
+    </p>
+    <div id="menu">
+      <div class="nav-container">
+        <div class="nav-left">
+          <a class="navlink current" href="index.html">RADI</a>
+        </div>
+        <div class="nav-right">
+          <a class="navlink" href="INFO/info.html">INFO</a>
+          <a class="navlink" href="">ARXIU</a>
+        </div>
+      </div>
     </div>
-    <!-- <div class="nav-container" id="navbar">
-     <script>
-       $('.nav-container').load('header_nav.html .nav-container div')
-     </script>     -->
-    <div></div>
+
     <div class="slider">
       <span class="acts">
-        <span class="item" id="card1"
-          ><h2>EMMIRALLAMENT</h2>
+        <span class="item" id="card1">
+          <h2>EMMIRALLAMENT</h2>
           <script>
             $('#card1').load('INICI/CURRENT_ACTS/ACT_1/act_1.html #card1 div');
           </script>
@@ -50,9 +55,36 @@
             $('#card3').load('INICI/CURRENT_ACTS/ACT_3/act_3.html #card3 div');
           </script>
         </div>
-        <li class="item"><h2>EMMIRALLAMENT</h2></li>
-        <li class="item"><h2>EMMIRALLAMENT</h2></li>
+
+        <li class="item">
+          <div class="comingsoon">
+            <h2>MÉS</h2>
+            <h2>ESDEVENIMENTS</h2>
+            <h2>AVIAT</h2>
+          </div>
+        </li>
+
+        <li class="item">
+          <div class="comingsoon">
+            <h2>MÉS</h2>
+            <h2>ESDEVENIMENTS</h2>
+            <h2>AVIAT</h2>
+          </div>
+        </li>
       </span>
     </div>
+    <script type="text/javascript">
+      (function($) {
+        $(document).ready(function() {
+          $(window).scroll(function() {
+            if ($(this).scrollTop() > 10) {
+              $('#menu').fadeIn(500);
+            } else {
+              $('#menu').fadeOut(500);
+            }
+          });
+        });
+      })(jQuery);
+    </script>
   </body>
 </html>

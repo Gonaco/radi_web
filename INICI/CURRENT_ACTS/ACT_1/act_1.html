@@ -5,8 +5,9 @@
     <link rel="stylesheet" href="css/lore.css" />
     <link rel="stylesheet" href="css/card-styles.css" />
     <link rel="stylesheet" href="css/formstyles.css" />
-
-        <script>
+    <link rel="icon" href="img/dot.png" type="image/gif" sizes="16x16" />
+    
+    <script>
       function includeHTML() {
 	  var z, i, elmnt, file, xhttp;
 	  /* Loop through a collection of all HTML elements: */
@@ -35,7 +36,7 @@
 	  }
       }
     </script>
-    
+
     <script
       src="https://code.jquery.com/jquery-3.4.1.js"
       integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -46,11 +47,18 @@
   </head>
   <body>
     <div id="card1">
+      
       <div w3-include-html="text.html"></div>
       <div w3-include-html="INICI/CURRENT_ACTS/ACT_1/text.html"></div>
       <script>
-	includeHTML();
+      	includeHTML();
       </script>
+
+      <div class="title"><img class="dot" src="img/dot.png"/><h2> EMMIRALLAMENT</h2></div>
+
+      <div class="thumbnail">
+        <img src="img/dona-vel.jpg" class="img-card" />
+      </div>
 
       <!-- <container id="formulario"> -->
         <!-- <script>
@@ -62,24 +70,24 @@
         <div id="formulario">
           <div>
             <form class="register">
-              <input type="text" name="nom" class="name" placeholder="Nom" />
+              <input type="text" name="nom" class="name label" placeholder="Nom" />
       
               <input
                 type="text"
                 name="cognoms"
-                class="lastName"
+                class="lastName label"
                 placeholder="Cognoms"
               />
               <input
                 type="email"
                 name="mail"
-                class="email"
+                class="email label"
                 placeholder="Correu Electrònic"
               />
               <input
                 type="textarea"
                 name="comentari"
-                class="comment"
+                class="comment label"
                 placeholder="Comentari"
               />
             </form>

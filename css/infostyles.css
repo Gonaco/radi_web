@@ -1,157 +1,114 @@
-/* #barba-wrapper {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-} */
+/*
+* Hoja de estilo para página info (Versión Split)
+*/
 
-#start-open {
-  width: 100%;
-  /* position: fixed; */
-  left: 0;
-  top: 0;
+/********************** INSTAL FONTS ********************/
+@font-face {
+  font-family: 'avarabold';
+  src: url('fonts/AvaraBold/avara-bold-webfont.woff2') format('woff2'),
+    url('fonts/AvaraBold/avara-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/********************** CONTAINER SPLIT CONTENT ********************/
+.full-height {
   height: 100%;
 }
 
-/******* FULL CONTENT *******/
-.contentwrap {
-  width: 200vw;
-  height: 200vh;
-  padding-top: 1vw;
-  border-top: 1.5px solid black;
-  /* position: fixed; */
-  transform-origin: center top;
-  top: 100vh;
-  /* overflow: hidden; */
-  z-index: 0;
-  /* background-color: white; */
-  left: -50vw;
-  margin: auto;
-  transition: transform 2s;
+.info-container {
+  display: flex;
+  align-items: center;
 }
 
-/******** INDIVIDUAL DIV ********/
-.contact {
-  /* position: absolute; */
-  /* transform: rotate(-90deg); */
-  /* left: 4.5vw; */
-  z-index: 11;
-  bottom: 50px;
-  padding-left: 55px;
-  font-size: 18px;
-}
-/******** INDIVIDUAL DIV ********/
-.cw1 {
-  transform: rotate(-150deg);
-  z-index: 10;
-}
-/******** INDIVIDUAL DIV ********/
-.cw2 {
-  transform: rotate(-120deg);
-  z-index: 11;
+.about,
+.radi-family {
+  margin: 20px 50px 0px 15px;
 }
 
-.team {
-  transform: rotate(-150deg);
+.left-content {
+  font-family: 'avara';
+  width: 50%;
+  border-right: solid 1.5px black;
 }
 
-/******** INDIVIDUAL DIV ********/
-.cw3 {
-  z-index: 12;
-  background-color: transparent !important;
-  pointer-events: none;
+.right-content {
+  justify-content: left;
 }
 
-.cw3right {
-  transform: rotate(-90deg);
+.radi-family-mobile {
+  display: none;
 }
 
-/******** INDIVIDUAL DIV ********/
-.cw4 {
-  transform: rotate(-120deg);
-  z-index: 11;
-  background-color: white !important;
-}
+/********************** TABLE CONTACT-INFO ********************/
 
-.program {
-  transform: rotate(-120deg);
+.title {
+  border-collapse: separate;
+  border-spacing: 500px;
 }
-
-/******** INDIVIDUAL DIV ********/
-.cw5 {
-  z-index: 14;
-  background-color: transparent;
-  pointer-events: none;
-}
-
-.cw5right {
-  transform: rotate(-90deg);
-}
-/****************/
-
-div {
+.contact-info p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
-}
-.mainopen {
-  background-color: transparent !important;
-  width: calc(50% + 1.5px);
-  height: 100vh;
-  z-index: 10;
-  /* position: relative; */
-  transform: rotate(90deg);
-  transform-origin: left bottom;
-  left: 50vw;
-  padding: 0.5vw;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  height: 100vw;
-  border-left: 1.5px soild;
+  font-weight: lighter !important;
 }
 
-.mainopen {
-  transform: rotate(0deg);
-  transition: transform 1.9s ease-out;
+th {
+  text-align: left;
+  width: 50px;
 }
 
-/***************** CONTENT INSIDE *****************/
+/********************** MEDIA QUERIES ********************/
 
-.main-content {
-  /* position: absolute; */
-  transform: rotate(-90deg);
-  left: 4.5vw;
-  z-index: 11;
-  bottom: -10px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
+@media screen and (max-width: 800px) {
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    flex: 100%;
+    max-width: 100%;
+  }
+  .full-height {
+    height: auto;
+  }
+  .left-content {
+    font-family: 'avara';
+    width: auto;
+    border-right: none;
+    border-bottom: solid 1.5px black;
+  }
+
+  table {
+    display: none;
+  }
+  .radi-family-mobile {
+    display: inline;
+  }
+  .credencials {
+    margin: 20px 50px 0px 15px;
+  }
 }
 
-.main-content1 {
-  transform-origin: left bottom;
-  /* position: relative; */
-  font-size: 18px;
-  font-family: Helvetica;
-  transform: rotate(90deg);
-  right: -140vw;
-  bottom: 155px;
-  z-index: 12;
-  width: 215px;
-}
-
-.main-content2 {
-  transform-origin: left bottom;
-  /* position: relative; */
-  font-size: 18px;
-  font-family: Helvetica;
-  transform: rotate(90deg);
-  right: -157vw;
-  bottom: 27px;
-  z-index: 12;
-  width: 215px;
-}
-
-#main-content1,
-#main-content2 {
-  transition: transform 2s;
+@media screen and (max-width: 600px) {
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    flex: 100%;
+    max-width: 100%;
+  }
+  .full-height {
+    height: auto;
+  }
+  .left-content {
+    font-family: 'avara';
+    width: auto;
+    border-right: none;
+    border-bottom: solid 1.5px black;
+  }
+  .radi-family {
+    display: none;
+  }
+  .radi-family-mobile {
+    display: inline;
+  }
+  .credencials {
+    margin: 20px 50px 0px 15px;
+  }
 }
