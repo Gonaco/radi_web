@@ -2,6 +2,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
+
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/lore.css" />
     <link rel="stylesheet" href="css/card-styles.css" />
@@ -9,19 +10,21 @@
     <link rel="icon" href="img/dot.png" type="image/gif" sizes="16x16" />
     <script type="text/javascript" src="scripts.js"></script>
     <script
-      src="https://code.jquery.com/jquery-3.4.1.js"
-      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-      crossorigin="anonymous"
+      type="text/javascript"
+      src="node_modules/jquery/dist/jquery.min.js"
     ></script>
   </head>
   <body>
     <div class="welcome"></div>
     <p class="intro">
-      Andaepeliquae duciuntio et, nihillamus excest litiumet, seniet eos re sed
-      modiciunto quunt voluptat moloris rem. Dersperum, sit qui to que veligento
-      te vendanissit quundandam re pellaborum repe odis delique consecto id que
-      nihicia tatius. Dit acillignatur re etum est quo dolecta voluptatem.
-      <a href="INFO/info.html">Read More</a>
+      L’accepció geomètrica del terme “radi” traça la línea de correspondència
+      entre ment i cos dins el problema ontològic. Seguint aquesta lògica, Radi
+      és un projecte errant que busca oferir un espai de retrobament corporal
+      conscient, en resposta a la sublimació de la cultura racionalista com a
+      única via de coneixement. El nostre objectiu és el de reivindicar les
+      nocions expressives del cos, posant en el punt de mira les conductes
+      sistemàtiques d’aquest en relació als espais arquitectònics, urbanístics i
+      geogràfics. <a href="INFO/info.html">Read More</a>
     </p>
     <div id="menu">
       <div class="nav-container">
@@ -34,8 +37,38 @@
         </div>
       </div>
     </div>
+    <div class="external">
+      <div class="slider">
+        <div class="acts" id="card1">
+          <!-- <span id="card1"></span> -->
+          <script>
+            $('#card1').load('INICI/CURRENT_ACTS/ACT_1/act_1.html #card1 div');
+          </script>
+        </div>
+        <div class="acts" id="card2">
+          <script>
+            $('#card2').load('INICI/CURRENT_ACTS/ACT_2/act_2.html #card2 div');
+          </script>
+        </div>
+        <div class="acts" id="card3">
+          <script>
+            $('#card3').load('INICI/CURRENT_ACTS/ACT_3/act_3.html #card3 div');
+          </script>
+        </div>
+        <div class="acts" id="card4">
+          <script>
+            $('#card4').load('INICI/CURRENT_ACTS/ACT_4/act_4.html #card4 div');
+          </script>
+        </div>
+        <div class="acts" id="card5">
+          <script>
+            $('#card5').load('INICI/CURRENT_ACTS/ACT_4/act_4.html #card4 div');
+          </script>
+        </div>
+      </div>
+    </div>
 
-    <div class="slider">
+    <!-- <div class="slider">
       <span class="acts">
         <span class="item" id="card1">
           <h2>EMMIRALLAMENT</h2>
@@ -57,7 +90,7 @@
         </div>
 
         <li class="item">
-          <div class="comingsoon">
+          <div class= blur">
             <h2>MÉS</h2>
             <h2>ESDEVENIMENTS</h2>
             <h2>AVIAT</h2>
@@ -65,18 +98,18 @@
         </li>
 
         <li class="item">
-          <div class="comingsoon">
+          <div class= blur">
             <h2>MÉS</h2>
             <h2>ESDEVENIMENTS</h2>
             <h2>AVIAT</h2>
           </div>
         </li>
       </span>
-    </div>
+    </div> -->
     <script type="text/javascript">
-      (function($) {
-        $(document).ready(function() {
-          $(window).scroll(function() {
+      (function ($) {
+        $(document).ready(function () {
+          $(window).scroll(function () {
             if ($(this).scrollTop() > 10) {
               $('#menu').fadeIn(500);
             } else {

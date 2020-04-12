@@ -9,7 +9,7 @@
       format('woff2'),
     url('../fonts/GlyphWorld-Mountain/glyphworld-mountain-webfont.woff')
       format('woff'),
-    url('/fonts/GlyphWorld-Mountain/glyphworld-mountain-webfont.svg#glyphworldmountain')
+    url('../fonts/GlyphWorld-Mountain/glyphworld-mountain-webfont.svg#glyphworldmountain')
       format('svg');
   font-weight: normal;
   font-style: normal;
@@ -17,12 +17,15 @@
 
 @font-face {
   font-family: 'avarabold';
-  src: url('/fonts/AvaraBold/avara-bold-webfont.woff2') format('woff2'),
-    url('/fonts/AvaraBold/avara-bold-webfont.woff') format('woff');
+  src: url('../fonts/Avara/avara.eot');
+  src: url('../fonts/Avara/avara.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Avara/avara.woff2') format('woff2'),
+    url('../fonts/Avara/avara.woff') format('woff'),
+    url('../fonts/Avara/avara.ttf') format('truetype'),
+    url('../fonts/Avara/avara.svg#avarabold') format('svg');
   font-weight: normal;
   font-style: normal;
 }
-
 /********************** NAV MENU ********************/
 
 a {
@@ -32,16 +35,20 @@ a {
 a.navlink {
   text-decoration: none;
   font-size: 28pt !important;
+  top: 2px;
 }
 
-a.navlink:hover,
-a.navlink:active {
-  font-family: 'glyphworldmountain';
-}
-
+a.navlink:active,
 a.current {
   font-family: 'glyphworldmountain';
+  font-size: 28pt !important;
+  vertical-align: top !important;
 }
+
+.nav-left {
+  padding-left: 1vw;
+}
+
 #menu {
   position: fixed;
   top: 0px;
@@ -59,9 +66,10 @@ a.current {
   font-family: Arial, Helvetica Neue, sans-serif;
   color: black;
 }
+
 /********************** INTRO ********************/
 .intro {
-  font-family: 'avara';
+  font-family: 'avarabold';
   font-weight: normal;
   font-style: normal;
   font-size: 16pt;
@@ -86,50 +94,61 @@ a.current {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 540px;
+  min-height: 75vh;
   width: 100%;
   height: auto;
 }
+
+/********************** HIDE SCROLLBAR ********************/
+::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
+
+::-webkit-scrollbar-button {
+  width: 1px;
+  height: 1px;
+}
 /********************** CARDS APP ********************/
 
+.external {
+  overflow: hidden;
+  width: 100vw;
+}
+
 .slider {
-  display: grid;
-  grid-template-columns: 6;
-  align-content: start;
-  width: 100%;
-  height: 100%;
-}
-
-.slider > * {
-  grid-column: 1 / -1;
-}
-
-.slider > .full {
-  grid-column: 1 / -1;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
 }
 
 .acts {
-  display: grid;
-  grid-template-columns: repeat(5, 30%);
-  overflow-x: scroll;
-  border-top: black 1.5px solid;
+  overflow-x: none;
+  flex: 1 0 auto;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  border: black 1.5pt solid;
+  border-width: 1.5pt 1pt;
+  width: 30vw;
+  height: 90vh;
+  padding-left: 5px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: left; */
 }
 
 /********************** CARDS ********************/
 /********************** ITEM ********************/
 
-.item,
-.item2,
-.item3 {
-  padding: 3px 3.5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
+/* .card1,
+.card2,
+.card3 {
   background: #fff;
   border-style: solid;
   border-color: black;
   border-width: 0px 2px 1.5px 0px;
-}
+} */
 /* Hide scrollbar for Chrome, Safari and Opera */
 .item::-webkit-scrollbar {
   display: none;

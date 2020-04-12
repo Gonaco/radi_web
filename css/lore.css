@@ -16,3 +16,11 @@ h2 {
   font-weight: normal;
   font-size: 13pt;
 }
+
+p {
+  word-wrap: break-word;
+}
+
+.firstparagraph {
+  margin-block-end: 0em;
+}
