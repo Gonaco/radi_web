@@ -2,122 +2,58 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
-
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/lore.css" />
-    <link rel="stylesheet" href="css/card-styles.css" />
-    <link rel="stylesheet" href="css/formstyles.css" />
+    <link rel="stylesheet" href="css/wip_styles.css" />
     <link rel="icon" href="img/dot.png" type="image/gif" sizes="16x16" />
-    <script type="text/javascript" src="scripts.js"></script>
-    <script
-      type="text/javascript"
-      src="node_modules/jquery/dist/jquery.min.js"
-    ></script>
-  </head>
-  <body>
-    <div class="welcome"></div>
-    <p class="intro">
-      L’accepció geomètrica del terme “radi” traça la línea de correspondència
-      entre ment i cos dins el problema ontològic. Seguint aquesta lògica, Radi
-      és un projecte errant que busca oferir un espai de retrobament corporal
-      conscient, en resposta a la sublimació de la cultura racionalista com a
-      única via de coneixement. El nostre objectiu és el de reivindicar les
-      nocions expressives del cos, posant en el punt de mira les conductes
-      sistemàtiques d’aquest en relació als espais arquitectònics, urbanístics i
-      geogràfics. <a href="INFO/info.html">Read More</a>
-    </p>
-    <div id="menu">
-      <div class="nav-container">
-        <div class="nav-left">
-          <a class="navlink current" href="index.html">RADI</a>
+ </head>
+<body>
+   <div>
+    <script>
+        var videos = [
+    'img/underconstruction01.mp4',
+    'img/underconstruction02.mp4',
+    'img/underconstruction03.mp4',
+    'img/underconstruction04.mp4',
+    'img/underconstruction05.mp4',
+    'img/underconstruction06.mp4',
+    'img/underconstruction07.mp4',
+    'img/underconstruction08.mp4',
+    'img/underconstruction09.mp4',
+    'img/underconstruction10.mp4',
+    'img/underconstruction11.mp4',
+    'img/underconstruction12.mp4',
+    'img/underconstruction13.mp4',
+    'img/underconstruction14.mp4',
+    'img/underconstruction15.mp4'
+    ];
+
+var index=Math.floor(Math.random() * videos.length);
+var html='<div class="fullscreen_video_wrap"><video autoplay muted plainsinline class="vid" img="' + videos[index] +'"</video></div>';
+document.write(html);
+        </script>
+          <div class="intro" id="introduccio">
+            <h2 class="title blend">— Sota construcció</h2>
+            <p class="corps blend">Benvinguda a una pàgina en blanc. Ara no hi ha res.</p>   
+            <p class="corps blend">Si tens temps, prova actualizar la pàgina.</p>    
+            <p class="corps blend">Si tot i així vols posar-te en contacte, aquest és el nostre correu: </p> 
+            <p class="corps blend">projecte.radi@gmail.com </p>
         </div>
-        <div class="nav-right">
-          <a class="navlink" href="INFO/info.html">INFO</a>
-          <a class="navlink" href="">ARXIU</a>
-        </div>
-      </div>
     </div>
-    <div class="external">
-      <div class="slider">
-        <div class="acts" id="card1">
-          <!-- <span id="card1"></span> -->
-          <script>
-            $('#card1').load('INICI/CURRENT_ACTS/ACT_1/act_1.html #card1 div');
-          </script>
-        </div>
-        <div class="acts" id="card2">
-          <script>
-            $('#card2').load('INICI/CURRENT_ACTS/ACT_2/act_2.html #card2 div');
-          </script>
-        </div>
-        <div class="acts" id="card3">
-          <script>
-            $('#card3').load('INICI/CURRENT_ACTS/ACT_3/act_3.html #card3 div');
-          </script>
-        </div>
-        <div class="acts" id="card4">
-          <script>
-            $('#card4').load('INICI/CURRENT_ACTS/ACT_4/act_4.html #card4 div');
-          </script>
-        </div>
-        <div class="acts" id="card5">
-          <script>
-            $('#card5').load('INICI/CURRENT_ACTS/ACT_4/act_4.html #card4 div');
-          </script>
-        </div>
-      </div>
-    </div>
+  
+      
 
-    <!-- <div class="slider">
-      <span class="acts">
-        <span class="item" id="card1">
-          <h2>EMMIRALLAMENT</h2>
-          <script>
-            $('#card1').load('INICI/CURRENT_ACTS/ACT_1/act_1.html #card1 div');
-          </script>
-        </span>
-        <span class="item2" id="card2"
-          ><h2>EMMIRALLAMENT</h2>
-          <script>
-            $('#card2').load('INICI/CURRENT_ACTS/ACT_2/act_2.html #card2 div');
-          </script>
-        </span>
-        <div class="item3" id="card3">
-          <h2>EMMIRALLAMENT</h2>
-          <script>
-            $('#card3').load('INICI/CURRENT_ACTS/ACT_3/act_3.html #card3 div');
-          </script>
-        </div>
-
-        <li class="item">
-          <div class= blur">
-            <h2>MÉS</h2>
-            <h2>ESDEVENIMENTS</h2>
-            <h2>AVIAT</h2>
-          </div>
-        </li>
-
-        <li class="item">
-          <div class= blur">
-            <h2>MÉS</h2>
-            <h2>ESDEVENIMENTS</h2>
-            <h2>AVIAT</h2>
-          </div>
-        </li>
-      </span>
-    </div> -->
-    <script type="text/javascript">
-      (function ($) {
-        $(document).ready(function () {
-          $(window).scroll(function () {
-            if ($(this).scrollTop() > 10) {
-              $('#menu').fadeIn(500);
-            } else {
-              $('#menu').fadeOut(500);
+</body>
+<script type="text/javascript">
+    window.onload = function(){
+        var bsDiv = document.getElementById("introduccio");
+        var x, y;
+        window.addEventListener('mousemove', function(event){
+            x = event.clientX;
+            y = event.clientY;                    
+            if ( typeof x !== 'undefined' ){
+                bsDiv.style.left = x + "px";
+                bsDiv.style.top = y + "px";
             }
-          });
-        });
-      })(jQuery);
-    </script>
-  </body>
+        }, false);
+    }
+</script>
 </html>

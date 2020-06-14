@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/lore.css" />
+    <link rel="stylesheet" href="css/card-styles.css" />
+    <link rel="stylesheet" href="css/formstyles.css" />
+    <link rel="icon" href="img/dot.png" type="image/gif" sizes="16x16" />
+    <script type="text/javascript" src="scripts.js"></script>
+    <script
+      type="text/javascript"
+      src="node_modules/jquery/dist/jquery.min.js"
+    ></script>
+  </head>
+  <body>
+    <div class="welcome"></div>
+    <p class="intro">
+      L’accepció geomètrica del terme “radi” traça la línea de correspondència
+      entre ment i cos dins el problema ontològic. Seguint aquesta lògica, Radi
+      és un projecte errant que busca oferir un espai de retrobament corporal
+      conscient, en resposta a la sublimació de la cultura racionalista com a
+      única via de coneixement. El nostre objectiu és el de reivindicar les
+      nocions expressives del cos, posant en el punt de mira les conductes
+      sistemàtiques d’aquest en relació als espais arquitectònics, urbanístics i
+      geogràfics. <a href="INFO/info.html">Read More</a>
+    </p>
+    <div id="menu">
+      <div class="nav-container">
+        <div class="nav-left">
+          <a class="navlink current" href="index.html">RADI</a>
+        </div>
+        <div class="nav-right">
+          <a class="navlink" href="INFO/info.html">INFO</a>
+          <a class="navlink" href="">ARXIU</a>
+        </div>
+      </div>
+    </div>
+    <div class="external">
+      <div class="slider">
+        <div class="acts" id="card1">
+          <!-- <span id="card1"></span> -->
+          <script>
+            $('#card1').load('INICI/CURRENT_ACTS/ACT_1/act_1.html #card1 div');
+          </script>
+        </div>
+        <div class="acts" id="card2">
+          <script>
+            $('#card2').load('INICI/CURRENT_ACTS/ACT_2/act_2.html #card2 div');
+          </script>
+        </div>
+        <div class="acts" id="card3">
+          <script>
+            $('#card3').load('INICI/CURRENT_ACTS/ACT_3/act_3.html #card3 div');
+          </script>
+        </div>
+        <div class="acts" id="card4">
+          <script>
+            $('#card4').load('INICI/CURRENT_ACTS/ACT_4/act_4.html #card4 div');
+          </script>
+        </div>
+        <div class="acts" id="card5">
+          <script>
+            $('#card5').load('INICI/CURRENT_ACTS/ACT_4/act_4.html #card4 div');
+          </script>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="foot-visible">
+      <div>
+        <p class="foot-visible-element">
+          Newsletter
+        </p>
+      </div>
+      <div><p class="foot-visible-element">Facebook</p></div>
+      <div><p class="foot-visible-element">Instagram</p></div>
+    </div> -->
+  </body>
+
+  <script type="text/javascript">
+    (function ($) {
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 10) {
+            $('#menu').fadeIn(500);
+          } else {
+            $('#menu').fadeOut(500);
+          }
+        });
+      });
+    })(jQuery);
+  </script>
+</html>
