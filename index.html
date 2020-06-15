@@ -17,6 +17,21 @@
     justify-content: flex-end;
     margin-right: 40px;
      }
+
+    .text_description{
+        margin-right: 35px;
+        font-family: 'Helvetica Neue';
+    }
+    @media screen and (max-width: 414px) {
+        .description{ margin-right: 10px;
+            margin-left: 10px;
+        bottom: 30px;
+        justify-content: left;}
+
+    .text_description {
+        margin-right: 0;
+    }
+    }
  </style>
 <body>
    <div>
@@ -59,7 +74,7 @@
     ]
 
 var index = Math.floor(Math.random() * videos.length);
-var html='<div class="fullscreen_video_wrap"><video autoplay muted plainsinline class="vid" src="' + videos[index] +'"</video></div><div class="description"><p style="margin-right: 35px; font-family: Helvetica Neue;">'+ names[index] +'</p></div>';
+var html='<div class="fullscreen_video_wrap"><video autoplay muted plainsinline class="vid" src="' + videos[index] +'"</video></div><div class="description"><p class="text_description">'+ names[index] +'</p></div>';
 document.write(html);
         </script>
           <div class="intro" id="introduccio">

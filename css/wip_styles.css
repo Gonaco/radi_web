@@ -62,3 +62,12 @@ h2 {
 .text-description {
     font-family: 'Helvetica Neue';
 }
+
+@media screen and (max-width: 400px) {
+    .intro {
+        z-index: 1;
+        position: fixed;
+        left: 15px;
+        top: 40px;
+    }
+}
