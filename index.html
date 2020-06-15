@@ -3,40 +3,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <title>Radi - Sota Construcció</title>
-    <link rel="stylesheet" href="css/wip_styles.css" />
+    <link rel="stylesheet" href="css/wip_styles.css">
     <link rel="icon" href="img/dot.png" type="image/gif" sizes="16x16" />
  </head>
- <style>
-     .description{
-    height: 100vh;
-    position: fixed;
-    z-index: 15;
-    width: 100%;
-    color: white;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    margin-right: 40px;
-     }
-
-    .text_description{
-        margin-right: 35px;
-        font-family: 'Helvetica Neue';
-        font-style: italic;
-    }
-    @media screen and (max-width: 414px) {
-        .description{ margin-right: 10px;
-            margin-left: 10px;
-        bottom: 30px;
-        justify-content: left;}
-
-    .text_description {
-        margin-right: 10px;
-    }
-    }
- </style>
 <body>
-   <div>
+<div>
     <script>
         var videos = [
     'img/underconstruction01.mp4',
@@ -76,15 +47,19 @@
     ]
 
 var index = Math.floor(Math.random() * videos.length);
-var html='<div class="fullscreen_video_wrap"><video autoplay muted plainsinline class="vid" src="' + videos[index] +'"</video></div><div class="description"><p class="text_description">'+ names[index] +'</p></div>';
+var html='<div class="fullscreen_video_wrap"><video autoplay muted plainsinline loop class="vid" src="' + videos[index] +'"</video></div><div class="description"><p class="text_description">'+ names[index] +'</p></div>';
 document.write(html);
         </script>
-          <div class="intro" id="introduccio">
+        <div class="intro" id="introduccio">
+            <div class="firstparagraph">
             <h2 class="title blend">— Sota construcció</h2>
             <p class="corps blend">Benvinguda a una pàgina en blanc.</p>
+            </div>
+            <div class="secondparagraph">
             <p class="corps blend">Ara no hi ha res.<br/>Si tens temps, prova actualizar la pàgina. <br/>Si tot i així vols posar-te en contacte, aquest és el nostre correu: <br/>projecte.radi@gmail.com </p>
+            </div>
         </div>
-    </div>
+</div>
   
       
 

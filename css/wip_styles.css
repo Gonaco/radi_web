@@ -35,11 +35,19 @@ body{
     position: fixed;
     left: 30px;
     top: 40px;
+    line-height: 2;
 
 }
 
+.firstparagraph {
+    line-height: 0px;
+}
+.secondparagraph {
+    line-height: 17px;
+}
+
 .title{
-    font-family: 'Helvetica Neue';
+    font-family: Arial, Helvetica Neue, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 23px;
@@ -59,15 +67,38 @@ h2 {
   font-weight: 100;
 }
 
-.text-description {
-    font-family: 'Helvetica Neue';
+
+.description{
+    height: 100vh;
+    position: fixed;
+    z-index: 15;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-right: 40px;
+     }
+
+.text_description{
+        margin-right: px;
+        font-family: Arial, Helvetica Neue, sans-serif;
+        font-style: italic;
+    }
+@media screen and (max-width: 414px) {
+        .description{ margin-right: 10px;
+            margin-left: 10px;
+        bottom: 30px;
+        justify-content: left;
 }
 
-@media screen and (max-width: 400px) {
-    .intro {
-        z-index: 1;
-        position: fixed;
-        left: 15px;
-        top: 40px;
-    }
+.text_description {
+        margin-right: 10px;
+}
+.intro {
+    z-index: 1;
+    position: fixed;
+    left: 15px;
+    top: 40px;
+}
 }
