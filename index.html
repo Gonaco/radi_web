@@ -5,6 +5,19 @@
     <link rel="stylesheet" href="css/wip_styles.css" />
     <link rel="icon" href="img/dot.png" type="image/gif" sizes="16x16" />
  </head>
+ <style>
+     .description{
+    height: 100vh;
+    position: fixed;
+    z-index: 15;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-right: 40px;
+     }
+ </style>
 <body>
    <div>
     <script>
@@ -26,8 +39,27 @@
     'img/underconstruction15.mp4'
     ];
 
-var index=Math.floor(Math.random() * videos.length);
-var html='<div class="fullscreen_video_wrap"><video autoplay muted plainsinline class="vid" src="' + videos[index] +'"</video></div>';
+    var names = [
+        'Amazing House of Cards - BrendonsRiotGirl01',
+        'Super jenga fail - Eva Unit 7 Super Dead Heat Drive',
+        'Super Secret Jenga Fail - dysh21',
+        'Cat really hates wacky inflatable tube guy - Rumble Viral',
+        'Wacky Wacky Inflatable Arm-Flailing Tube Man Dances to Hey Ya - rknwcht17',
+        'Bouncy Setup - bouncyinflatables',
+        'Bouncy House blows over - MCVALKRIE',
+        'Child injured when bounce house at church festival blew away speaks out - WYFF News 4',
+        '3 de 10 amb folre i manilles descarregat pels Minyons de Terrassa - Minyons de Terrassa',
+        'Human Dominoes - Brad Dufault',
+        'Largest human mattress dominoes - Guinness World Records',
+        'domino by cora - Eric B',
+        'ASMR Kneading dough for bread! - Whispers In Chaos',
+        'World\'s Greatest Pizza Dough Twirler - Robert Gold',
+        'GINGERBREAD HOUSE FAIL!!!!!!!! - mjfannchocolover1'
+
+    ]
+
+var index = Math.floor(Math.random() * videos.length);
+var html='<div class="fullscreen_video_wrap"><video autoplay muted plainsinline class="vid" src="' + videos[index] +'"</video></div><div class="description"><p style="margin-right: 35px; font-family: Helvetica Neue;">'+ names[index] +'</p></div>';
 document.write(html);
         </script>
           <div class="intro" id="introduccio">
@@ -55,5 +87,10 @@ document.write(html);
             }
         }, false);
     }
+
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ document.getElementById("introduccio").style.position = "fixed";
+    }
+
 </script>
 </html>

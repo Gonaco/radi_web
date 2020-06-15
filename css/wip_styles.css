@@ -1,17 +1,6 @@
 body{
     margin:0;
 }
-/* 
-.video_bg {
-    overflow: hidden;
-    z-index: -1;
-    display: flex;
-    justify-content: center;
-}
-
-.container {
-    margin: auto; 
-} */
 
 .fullscreen_video_wrap {
     z-index: -1;
@@ -41,8 +30,6 @@ body{
     animation: fadeIn 2s;
 }
 
-
-
 .intro {
     z-index: 1;
     position: fixed;
@@ -62,16 +49,16 @@ body{
 
 .corps{
 font-family: 'Times New Roman', Times, serif;
-font-size: 14px;
+font-size: 15px;
 color: white;
 }
-
-/* .blend {
-    mix-blend-mode: exclusion;
-  } */
 
 h2 {
     mix-blend-mode: difference;
   color: #000;
   font-weight: 100;
+}
+
+.text-description {
+    font-family: 'Helvetica Neue';
 }
