@@ -26,4 +26,10 @@ var animate = function () {
 	renderer.render(scene, camera);
 };
 
-animate();
+if (WEBGL.isWebGLAvailable()) {
+	// Initiate function or other initializations here
+	animate();
+} else {
+	var warning = WEBGL.getWebGLErrorMessage();
+	document.getElementById('container').appendChild(warning);
+}
